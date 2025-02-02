@@ -68,23 +68,22 @@ permalink: "/"
 
 {% block body %}
 <section class="relative bg-teal-900" x-data="{ mobileNavOpen: false }">
-    <img class="absolute top-0 left-0 w-full h-full object-cover mix-blend-screen"
+    <img class="absolute top-0 left-0 w-full h-full object-cover mix-blend-screen opacity-50"
         src="./assets/headers/bg-waves.png" alt="" />
-    <img class="absolute top-0 left-0 w-full h-full object-cover"
-        src="./assets/headers/map.png" alt="" />
+    <img class="absolute top-0 left-0 w-full h-full object-cover" src="./assets/headers/map.png" alt="" />
     <nav class="bg-teal-900 py-6">
         <div class="container mx-auto px-4">
-            <div class="relative flex items-center justify-between"><a class="inline-block" href="#"><img class="h-8"
-                        src="./assets/images/logo-white.svg" alt="" /></a>
+            <div class="relative flex items-center justify-between">
+                <img class="inline-block h-8" src="./assets/images/logo-white.svg" alt="" />
                 <ul class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:flex">
                     <li class="mr-8"><a class="inline-block text-white hover:text-lime-500 font-medium"
-                            href="about.html">About us</a></li>
+                            href="/">Home</a></li>
                     <li class="mr-8"><a class="inline-block text-white hover:text-lime-500 font-medium"
-                            href="pricing.html">Pricing</a></li>
+                            href="/about">About us</a></li>
                     <li class="mr-8"><a class="inline-block text-white hover:text-lime-500 font-medium"
                             href="/contact">Contact us</a></li>
-                    <li><a class="inline-block text-white hover:text-lime-500 font-medium" href="blog.html">Blog</a>
-                    </li>
+                    <li><a class="inline-block text-white hover:text-lime-500 font-medium" 
+                            href="/blog">Blog</a></li>
                 </ul>
                 <div class="flex items-center justify-end">
                     <div class="hidden md:block"><a
@@ -133,9 +132,7 @@ permalink: "/"
         <nav class="relative flex flex-col py-7 px-10 w-full h-full bg-white overflow-y-auto">
             <div class="flex items-center justify-between"><a class="inline-block" href="#"><img class="h-8"
                         src="./assets/logos/sign-logo-flow.svg" alt="" /></a>
-                <div class="flex items-center"><a
-                        class="inline-flex py-2.5 px-4 mr-6 items-center justify-center text-sm font-medium text-teal-900 hover:text-white border border-teal-900 hover:bg-teal-900  transition duration-200"
-                        href="#">Login</a>
+                <div class="flex items-center">
                     <button x-on:click="mobileNavOpen = !mobileNavOpen">
                         <svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M23.2 8.79999L8.80005 23.2M8.80005 8.79999L23.2 23.2" stroke="#1D1F1E"
@@ -147,12 +144,12 @@ permalink: "/"
             <div class="pt-20 pb-12 mb-auto">
                 <ul class="flex-col">
                     <li class="mb-6"><a class="inline-block text-teal-900 hover:text-teal-700 font-medium"
-                            href="about.html">About us</a></li>
+                            href="/">Home</a></li>
                     <li class="mb-6"><a class="inline-block text-teal-900 hover:text-teal-700 font-medium"
-                            href="pricing.html">Pricing</a></li>
+                            href="/about">About us</a></li>
                     <li class="mb-6"><a class="inline-block text-teal-900 hover:text-teal-700 font-medium"
                             href="/contact">Contact us</a></li>
-                    <li><a class="inline-block text-teal-900 hover:text-teal-700 font-medium" href="blog.html">Blog</a>
+                    <li><a class="inline-block text-teal-900 hover:text-teal-700 font-medium" href="/blog">Blog</a>
                     </li>
                 </ul>
             </div>
@@ -280,71 +277,11 @@ permalink: "/"
                             </div>
                         </div>
                     </div>
-                    <div class="w-full sm:w-1/2 px-4 mb-16 sm:mb-0">
-                        <div>
-                            <svg width="48" height="48" viewbox="0 0 48 48" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M0 8C0 3.58172 3.58172 0 8 0H40C44.4183 0 48 3.58172 48 8V40C48 44.4183 44.4183 48 40 48H8C3.58172 48 0 44.4183 0 40V8Z"
-                                    fill="white"></path>
-                                <path
-                                    d="M25 24C25 24.5523 24.5523 25 24 25C23.4477 25 23 24.5523 23 24C23 23.4477 23.4477 23 24 23C24.5523 23 25 23.4477 25 24Z"
-                                    fill="#022C22"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M24 25C24.5523 25 25 24.5523 25 24C25 23.4477 24.5523 23 24 23C23.4477 23 23 23.4477 23 24C23 24.5523 23.4477 25 24 25Z"
-                                    fill="#022C22"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M40 23C40.5523 23 41 23.4477 41 24C41 33.3888 33.3888 41 24 41C23.4477 41 23 40.5523 23 40C23 39.4477 23.4477 39 24 39C32.2843 39 39 32.2843 39 24C39 23.4477 39.4477 23 40 23Z"
-                                    fill="#022C22"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M24 9C15.7157 9 9 15.7157 9 24C9 24.5523 8.55228 25 8 25C7.44772 25 7 24.5523 7 24C7 14.6112 14.6112 7 24 7C24.5523 7 25 7.44772 25 8C25 8.55228 24.5523 9 24 9Z"
-                                    fill="#022C22"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M36 23C36.5523 23 37 23.4477 37 24C37 31.1797 31.1797 37 24 37C23.4477 37 23 36.5523 23 36C23 35.4477 23.4477 35 24 35C30.0751 35 35 30.0751 35 24C35 23.4477 35.4477 23 36 23Z"
-                                    fill="#022C22"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M24 13C17.9249 13 13 17.9249 13 24C13 24.5523 12.5523 25 12 25C11.4477 25 11 24.5523 11 24C11 16.8203 16.8203 11 24 11C24.5523 11 25 11.4477 25 12C25 12.5523 24.5523 13 24 13Z"
-                                    fill="#022C22"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M32 23C32.5523 23 33 23.4477 33 24C33 28.9706 28.9706 33 24 33C23.4477 33 23 32.5523 23 32C23 31.4477 23.4477 31 24 31C27.866 31 31 27.866 31 24C31 23.4477 31.4477 23 32 23Z"
-                                    fill="#022C22"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M24 17C20.134 17 17 20.134 17 24C17 24.5523 16.5523 25 16 25C15.4477 25 15 24.5523 15 24C15 19.0294 19.0294 15 24 15C24.5523 15 25 15.4477 25 16C25 16.5523 24.5523 17 24 17Z"
-                                    fill="#022C22"></path>
-                            </svg>
-                            <div class="mt-6">
-                                <h5 class="text-2xl font-medium mb-3">Wind Energy</h5>
-                                <p class="mb-6">Wind turbines harness the kinetic energy of the wind to generate
-                                    electricity. Wind farms with multiple turbines are commonly used to produce large
-                                    amounts of clean energy.</p><a
-                                    class="inline-block text-lg  font-medium hover:text-teal-700" href="#">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-full sm:w-1/2 px-4">
-                        <div>
-                            <svg width="48" height="48" viewbox="0 0 48 48" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M0 8C0 3.58172 3.58172 0 8 0H40C44.4183 0 48 3.58172 48 8V40C48 44.4183 44.4183 48 40 48H8C3.58172 48 0 44.4183 0 40V8Z"
-                                    fill="white"></path>
-                                <path
-                                    d="M23.8425 12.3779C23.9008 12.238 24.0992 12.238 24.1575 12.3779L30.1538 26.7692C31.9835 31.1605 28.7572 36 24 36Lnan nanL24 36C19.2428 36 16.0165 31.1605 17.8462 26.7692L23.8425 12.3779Z"
-                                    fill="#022C22"></path>
-                            </svg>
-                            <div class="mt-6">
-                                <h5 class="text-2xl font-medium mb-3">Hydropower</h5>
-                                <p class="mb-6">This technology uses the energy from flowing water, such as rivers and
-                                    dams, to turn turbines and generate electricity. It's one of the oldest forms of
-                                    renewable energy.</p><a
-                                    class="inline-block text-lg  font-medium hover:text-teal-700" href="#">Read more</a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+
 </section>
 <section class="py-12 lg:py-24 overflow-hidden">
     <div class="container mx-auto px-4">
@@ -565,8 +502,8 @@ permalink: "/"
                             class="block flex-shrink-0 w-full px-4" src="./assets/testimonials/photo-lg.png"
                             alt="" /><img class="block flex-shrink-0 w-full px-4"
                             src="./assets/testimonials/photo-lg.png" alt="" /><img
-                            class="block flex-shrink-0 w-full px-4" src="./assets/testimonials/photo-lg.png"
-                            alt="" /></div>
+                            class="block flex-shrink-0 w-full px-4" src="./assets/testimonials/photo-lg.png" alt="" />
+                    </div>
                 </div>
             </div>
             <div class="w-full md:w-1/2 px-4">
@@ -622,8 +559,7 @@ permalink: "/"
     <div>
         <section>
             <div class="p-4">
-                <div
-                    class="max-w-xl lg:max-w-5xl mx-auto xl:max-w-none px-5 md:px-12 xl:px-24 py-16 bg-teal-900 ">
+                <div class="max-w-xl lg:max-w-5xl mx-auto xl:max-w-none px-5 md:px-12 xl:px-24 py-16 bg-teal-900 ">
                     <div class="container mx-auto px-4">
                         <div class="flex flex-wrap items-center -mx-4">
                             <div class="w-full lg:w-2/3 px-4 mb-8 lg:mb-0">
@@ -646,8 +582,7 @@ permalink: "/"
     </div>
 </div>
 <section class="relative py-12 lg:py-24 bg-orange-50 overflow-hidden">
-    <img class="absolute bottom-0 left-0"
-        src="./assets/footer/waves-lines-left-bottom.png" alt="" />
+    <img class="absolute bottom-0 left-0" src="./assets/footer/waves-lines-left-bottom.png" alt="" />
     <div class="container px-4 mx-auto relative">
         <div class="flex flex-wrap mb-16 -mx-4">
             <div class="w-full lg:w-2/12 xl:w-2/12 px-4 mb-16 lg:mb-0"><a class="inline-block mb-4" href="#"><img
