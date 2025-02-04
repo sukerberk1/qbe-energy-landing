@@ -9,6 +9,7 @@
         "build:sass": "sass src/assets/sass:./src/assets/css",
         "watch:eleventy": "cross-env ELEVENTY_ENV=DEV eleventy --serve",
         "build:eleventy": "cross-env ELEVENTY_ENV=PROD eleventy",
+        "watch:css": "tailwindcss build -i src/tailwind/tailwind.css -c src/tailwind/tailwind.config.js -o public/css/tailwind/tailwind.min.css --minify --watch",
         "watch:cms": "npx decap-server",
         "start": "del-cli ./public --force && npm-run-all --parallel watch:*",
         "build": "run-s build:*"
@@ -34,7 +35,8 @@
         "del-cli": "^5.0.0",
         "esbuild": "^0.21.4",
         "npm-run-all": "^4.1.5",
-        "sass": "^1.77.4"
+        "sass": "^1.77.4",
+        "tailwindcss": "^3.0.7"
     },
     "devDependencies": {
         "prettier": "^3.3.3",
