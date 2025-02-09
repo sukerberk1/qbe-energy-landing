@@ -11,6 +11,12 @@ permalink: "/"
 <link rel="stylesheet" href="/assets/css/local.css" />
 <link rel="stylesheet" href="/assets/css/critical.css" />
 
+<!-- Link Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="/assets/css/swiper/heroSwiper.css" />
+<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script defer src="/assets/js/heroSwiper.js"></script>   
+
 <!-- Script for Netlify Identity -->
 <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script defer>
@@ -67,23 +73,21 @@ permalink: "/"
 {% endblock %}
 
 {% block body %}
-<section class="relative bg-teal-900" x-data="{ mobileNavOpen: false }">
-    <img class="absolute top-0 left-0 w-full h-full object-cover mix-blend-screen opacity-50"
-        src="./assets/headers/bg-waves.png" alt="" />
-    <img class="absolute top-0 left-0 w-full h-full object-cover" src="./assets/headers/map.png" alt="" />
-    <div class="relative pt-18 pb-24 sm:pb-32 lg:pt-36 lg:pb-62">
-        <div class="container mx-auto px-4 relative">
-            <div class="max-w-lg xl:max-w-xl mx-auto text-center">
-                <h1 class="font-heading text-6xl tracking-tight text-white mb-8">
-                    Czystsza i tańsza energia dla twojego gospodarstwa</h1>
-                <p class="max-w-md xl:max-w-none text-lg text-white opacity-80 mb-10">Our commitment to green
-                    energy is paving the way for a cleaner, healthier planet. Join us on a journey towards a
-                    future where clean, renewable energy sources transform the way we power our lives.</p>
-                <a class="inline-flex py-3 px-4 items-center justify-center text-lg font-medium text-teal-900 border border-lime-500 hover:border-white bg-lime-500 hover:bg-white  transition duration-200"
-                    href="#">See our solutions</a>
-            </div>
+<section class="relative bg-teal-900 w-screen h-screen">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
         </div>
-    </div>
+        <div class="swiper-scrollbar"></div>
+      </div>
 </section>
 <section class="py-12 lg:py-24">
     <div class="container mx-auto px-4">
