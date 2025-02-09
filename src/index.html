@@ -15,7 +15,7 @@ permalink: "/"
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <link rel="stylesheet" href="/assets/css/swiper/heroSwiper.css" />
 <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script defer src="/assets/js/heroSwiper.js"></script>   
+<script defer src="/assets/js/heroSwiper.js"></script>
 
 <!-- Script for Netlify Identity -->
 <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -73,21 +73,69 @@ permalink: "/"
 {% endblock %}
 
 {% block body %}
-<section class="relative bg-teal-900 w-screen h-screen">
+<section class="relative bg-teal-900 w-full h-[85vh]">
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-          <div class="swiper-slide">Slide 4</div>
-          <div class="swiper-slide">Slide 5</div>
-          <div class="swiper-slide">Slide 6</div>
-          <div class="swiper-slide">Slide 7</div>
-          <div class="swiper-slide">Slide 8</div>
-          <div class="swiper-slide">Slide 9</div>
+            <div class="swiper-slide">
+                <img src="/assets/swiper/biogas.webp" alt="" />
+                <div class="absolute top-0 left-0 w-full h-full bg-black/60 backdrop-blur-xs">
+                    <div class="container mx-auto px-4 h-full flex flex-col justify-center items-start gap-4">
+                        <h2 class="uppercase text-gray-200 font-semibold">
+                            Reużywanie odpadów
+                        </h2>
+                        <h1
+                            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-6xl font-heading text-white mb-8 max-w-5xl leading-20">
+                            Przekształć odpady rolnicze w energię z biogazowni</h1>
+                        <p class="max-w-4xl text-gray-200">Nasza biogazownia przekształca odpady rolnicze w cenną
+                            energię, przyczyniając się do zrównoważonego rozwoju i ochrony środowiska. Dzięki
+                            nowoczesnym technologiom, proces ten jest nie tylko efektywny, ale także przyjazny dla
+                            planety.</p>
+                        <a class="mt-2 inline-flex py-2 px-3 items-center justify-center text-lg font-medium text-white border border-teal-900 hover:border-lime-600 bg-teal-900 hover:bg-lime-600  transition duration-200"
+                            href="#">Dowiedz się więcej</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/swiper/solar-farm.webp" alt="" />
+                <div class="absolute top-0 left-0 w-full h-full bg-black/60 backdrop-blur-xs">
+                    <div class="container mx-auto px-4 h-full flex flex-col justify-center items-start gap-4">
+                        <h2 class="uppercase text-gray-200 font-semibold">
+                            Energia słoneczna
+                        </h2>
+                        <h1
+                            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-6xl font-heading text-white mb-8 max-w-5xl leading-20">
+                            Wykorzystaj moc słońca dzięki fotowoltaice</h1>
+                        <p class="max-w-4xl text-gray-200">Nasze panele fotowoltaiczne przekształcają energię słoneczną
+                            w elektryczność, przyczyniając się do zrównoważonego rozwoju i ochrony środowiska. Dzięki
+                            nowoczesnym technologiom, proces ten jest nie tylko efektywny, ale także przyjazny dla
+                            planety.</p>
+                        <a class="mt-2 inline-flex py-2 px-3 items-center justify-center text-lg font-medium text-white border border-teal-900 hover:border-lime-600 bg-teal-900 hover:bg-lime-600  transition duration-200"
+                            href="#">Dowiedz się więcej</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/swiper/batteries.webp" alt="" />
+                <div class="absolute top-0 left-0 w-full h-full bg-black/60 backdrop-blur-xs">
+                    <div class="container mx-auto px-4 h-full flex flex-col justify-center items-start gap-4">
+                        <h2 class="uppercase text-gray-200 font-semibold">
+                            Magazyny energii
+                        </h2>
+                        <h1
+                            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-6xl font-heading text-white mb-8 max-w-5xl leading-20">
+                            Zwiększ niezależność energetyczną dzięki magazynom energii</h1>
+                        <p class="max-w-4xl text-gray-200">Nasze magazyny energii pozwalają na przechowywanie nadmiaru
+                            energii, co zwiększa niezależność energetyczną gospodarstw domowych i firm. Dzięki
+                            nowoczesnym technologiom, proces ten jest nie tylko efektywny, ale także przyjazny dla
+                            środowiska.</p>
+                        <a class="mt-2 inline-flex py-2 px-3 items-center justify-center text-lg font-medium text-white border border-teal-900 hover:border-lime-600 bg-teal-900 hover:bg-lime-600  transition duration-200"
+                            href="#">Dowiedz się więcej</a>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="swiper-scrollbar"></div>
-      </div>
+    </div>
 </section>
 <section class="py-12 lg:py-24">
     <div class="container mx-auto px-4">
@@ -141,7 +189,8 @@ permalink: "/"
                 <p class="mt-3 text-sm text-gray-500">{{ post.data.description }}</p>
                 <div class="grow flex flex-col justify-end items-end mt-4">
                     <a href="{{ post.url }}"
-                        class="inline-block text-white px-4 py-2 text-sm font-medium hover:text-teal-900 border border-teal-900 hover:border-lime-500 bg-teal-900 hover:bg-lime-500 transition duration-200">Czytaj dalej</a>
+                        class="inline-block text-white px-4 py-2 text-sm font-medium hover:text-teal-900 border border-teal-900 hover:border-lime-500 bg-teal-900 hover:bg-lime-500 transition duration-200">Czytaj
+                        dalej</a>
 
                 </div>
             </div>
