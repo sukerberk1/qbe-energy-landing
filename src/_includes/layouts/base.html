@@ -47,22 +47,6 @@
 
     <title>{{ title }}</title>
 
-    <script defer>
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('nav');
-            if (window.scrollY > 0) {
-                nav.classList.add('bg-white');
-                nav.classList.add('text-black');
-                nav.classList.remove('bg-transparent');
-                nav.classList.remove('text-white');
-            } else {
-                nav.classList.add('bg-transparent');
-                nav.classList.add('text-white');
-                nav.classList.remove('bg-white');
-                nav.classList.remove('text-black');
-            }
-        });
-    </script>
 </head>
 
 <body class="antialiased bg-body text-body font-body">
@@ -84,10 +68,12 @@
              hover:bg-white
              group
              md:px-40
-             text-white
+
+             bg-white
+             text-black
            " id="nav">
             <div>
-                <a href="#">
+                <a href="/">
                     <h1 class="font-semibold group-hover:text-black hover:lime-700">Quantum Bio Energy</h1>
                 </a>
             </div>
@@ -212,10 +198,15 @@
 <script defer>
     const button = document.querySelector('#menu-button');
     const menu = document.querySelector('#menu');
+    const nav = document.getElementById('nav');
 
     button.addEventListener('click', () => {
-        console.log('clicked');
+        // console.log('clicked');
         menu.classList.toggle('hidden');
+        nav.classList.add('bg-white');
+        nav.classList.add('text-black');
+        nav.classList.remove('bg-transparent');
+        nav.classList.remove('text-white');
     });
 </script>
 

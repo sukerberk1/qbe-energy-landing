@@ -31,45 +31,32 @@ permalink: "/"
     }
 </script>
 
-<!-- JSON Schema Markup -->
-<!-- prettier-ignore-start -->
-<script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "LocalBusiness",
-            "name": "{{ client.name }}",
-            {% if preloadImg %}"image": "{{ preloadImg }}",{% endif %}
-            {% if client.phoneFormatted %}"telephone": "{{ client.phoneFormatted }}",{% endif %}
-            {% if client.email %}"email": "{{ client.email }}",{% endif %}
-            {% if client.address %}
-                "address": {
-                    "@type": "PostalAddress"{% if client.address.lineOne %},
-                        "streetAddress": "{{ client.address.lineOne }}{% if client.address.lineTwo %}, {{ client.address.lineTwo }}{% endif %}"
-                    {% endif %}
-                    {% if client.address.city %},
-                        "addressLocality": "{{ client.address.city }}"
-                    {% endif %}
-                    {% if client.address.state %},
-                        "addressRegion": "{{ client.address.state }}"
-                    {% endif %}
-                    {% if client.address.zip %},
-                        "postalCode": "{{ client.address.zip }}"
-                    {% endif %}
-                    {% if client.address.country %},
-                        "addressCountry": "{{ client.address.country }}"
-                    {% endif %}
-                },
-            {% endif %}
-            {% if client.domain and page.url %}"url": "{{ client.domain }}{{ page.url }}",{% endif %}
-            {% if client.socials %}
-                "sameAs": [{% for platform, url in client.socials %}
-                        {% if not loop.first %},{% endif %}
-                        "{{ url }}"
-                    {% endfor %}]
-            {% endif %}
+<script defer>
+    window.addEventListener("load", () => {
+        // Remove bg-white and text-black on page load
+        nav.classList.remove('bg-white');
+        nav.classList.remove('text-black');
+        nav.classList.add('bg-transparent');
+        nav.classList.add('text-white');
+    })
+
+    window.addEventListener('scroll', () => {
+        const nav = document.getElementById('nav');
+
+        if (window.scrollY > 0) {
+            nav.classList.add('bg-white');
+            nav.classList.add('text-black');
+            nav.classList.remove('bg-transparent');
+            nav.classList.remove('text-white');
+        } else {
+            nav.classList.add('bg-transparent');
+            nav.classList.add('text-white');
+            nav.classList.remove('bg-white');
+            nav.classList.remove('text-black');
         }
-    </script>
-<!-- prettier-ignore-end -->
+    });
+</script>
+
 {% endblock %}
 
 {% block body %}
@@ -84,7 +71,7 @@ permalink: "/"
                             Reużywanie odpadów
                         </h2>
                         <h1
-                            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-6xl font-heading text-white mb-8 max-w-5xl leading-20">
+                            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl font-heading text-white mb-8 max-w-5xl">
                             Przekształć odpady rolnicze w energię z biogazowni</h1>
                         <p class="max-w-4xl text-gray-200">Nasza biogazownia przekształca odpady rolnicze w cenną
                             energię, przyczyniając się do zrównoważonego rozwoju i ochrony środowiska. Dzięki
@@ -103,7 +90,7 @@ permalink: "/"
                             Energia słoneczna
                         </h2>
                         <h1
-                            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-6xl font-heading text-white mb-8 max-w-5xl leading-20">
+                        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl font-heading text-white mb-8 max-w-5xl">
                             Wykorzystaj moc słońca dzięki fotowoltaice</h1>
                         <p class="max-w-4xl text-gray-200">Nasze panele fotowoltaiczne przekształcają energię słoneczną
                             w elektryczność, przyczyniając się do zrównoważonego rozwoju i ochrony środowiska. Dzięki
@@ -122,7 +109,7 @@ permalink: "/"
                             Magazyny energii
                         </h2>
                         <h1
-                            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-6xl font-heading text-white mb-8 max-w-5xl leading-20">
+                        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl font-heading text-white mb-8 max-w-5xl">
                             Zwiększ niezależność energetyczną dzięki magazynom energii</h1>
                         <p class="max-w-4xl text-gray-200">Nasze magazyny energii pozwalają na przechowywanie nadmiaru
                             energii, co zwiększa niezależność energetyczną gospodarstw domowych i firm. Dzięki
