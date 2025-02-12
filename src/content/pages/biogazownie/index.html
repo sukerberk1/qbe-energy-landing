@@ -13,94 +13,681 @@ hideOnDesktop: true
 
 {% block head %}
 <link rel="stylesheet" href="/assets/css/contact.css" />
+
+<style>
+    .form-button-container>div>button {
+        border-radius: 0 !important;
+        background-color: var(--color-teal-600) !important;
+        transition: 200ms ease !important;
+    }
+
+    .form-button-container>div>button:hover {
+        background-color: var(--color-lime-600) !important;
+    }
+
+    tr {
+        border-bottom: 1px solid gray;
+    }
+
+    table {
+        background-color: white;
+    }
+</style>
 {% endblock %}
 
 {% block body %}
-<section class="py-12 lg:py-24 relative overflow-hidden"><img
-        class="absolute top-0 left-0 w-full h-full max-h-116 md:max-h-128" src="/assets/contact/waves-bg-lime-half.png"
-        alt="" />
-    <div class="container mx-auto px-4 relative">
-        <div class="max-w-lg mx-auto">
-            <div class="text-center mb-20">
-                <h1 class="font-heading text-5xl sm:text-6xl md:text-7xl tracking-sm mb-6">Biogazownie</h1>
-                <p class="text-lg text-gray-700 mb-16">We are here to help you make a first move to greener choice. </p>
-            </div>
-            <div class="p-8 bg-white  shadow-md">
-                <div>
-                    <form action="">
-                        <label class="block pl-4 mb-1 text-sm font-medium" for="">Full Name</label>
-                        <input
-                            class="w-full px-4 py-3 mb-6 outline-none ring-offset-0 focus:ring-2 focus:ring-lime-500 shadow "
-                            type="text" />
-                        <label class="block pl-4 mb-1 text-sm font-medium" for="">Email</label>
-                        <input
-                            class="w-full px-4 py-3 mb-6 outline-none ring-offset-0 focus:ring-2 focus:ring-lime-500 shadow "
-                            type="text" />
-                        <label class="block pl-4 mb-1 text-sm font-medium" for=""><span>Company</span>
-                            <span class="text-gray-700">(optional)</span>
-                        </label>
-                        <input
-                            class="w-full px-4 py-3 mb-6 outline-none ring-offset-0 focus:ring-2 focus:ring-lime-500 shadow "
-                            type="text" />
-                        <label class="block pl-4 mb-1 text-sm font-medium" for="">Service</label>
-                        <div class="relative w-full mb-8 bg-white "><span
-                                class="absolute top-1/2 right-0 mr-4 transform -translate-y-1/2">
-                                <svg width="20" height="20" viewbox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6.3999 8.2L9.9999 11.8L13.5999 8.2" stroke="#646A69" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg></span>
-                            <select
-                                class="w-full px-4 py-3 text-gray-600 border  appearance-none cursor-pointer outline-none ring-offset-0 focus:ring-2 focus:ring-lime-500 bg-transparent relative"
-                                name="" id="">
-                                <option value="1">Select service</option>
-                                <option value="2">Sales</option>
-                                <option value="3">Marketing</option>
-                            </select>
-                        </div>
-                        <button
-                            class="flex w-full py-3 px-5 items-center justify-center font-medium text-white hover:text-teal-900 border border-teal-900 hover:border-lime-500 bg-teal-900 hover:bg-lime-500  transition duration-200"><span
-                                class="mr-2">Submit</span>
-                            <svg width="21" height="20" viewbox="0 0 21 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.25 10H15.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round"></path>
-                                <path d="M10.5 4.75L15.75 10L10.5 15.25" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </button>
-                    </form>
+
+<section class="relative text-white flex flex-col items-center justify-center overflow-hidden mt-24">
+    <div class="absolute inset-0 -z-10">
+        <img src="/assets/swiper/biogas.webp" class="w-full h-full object-cover blur-xs" />
+
+        <div class="absolute inset-0 bg-black/50"></div>
+    </div>
+
+    <div class="container mx-auto px-3 sm:px-5 md:px-8 lg:px-12 space-y-10 py-12 lg:space-y-14">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <hgroup class="space-y-4" data-prompt="Write the headings for the stats section">
+                <p data-id="tagline" class="font-medium">Zielona Energia</p>
+                <h2 data-id="title" class="font-bold text-balance text-4xl md:text-5xl lg:text-6xl">
+                    Biogazownie
+                </h2>
+            </hgroup>
+
+            <div class="space-y-6">
+                <p data-id="description">
+                    <strong>Biogazownie</strong> to innowacyjne rozwiązanie, które przekształca <strong>odpady
+                        organiczne</strong> w
+                    cenną <strong>energię</strong>. Dzięki temu procesowi zmniejszamy ilość odpadów i produkujemy
+                    <strong>zieloną energię</strong>
+                    przyjazną dla środowiska. Nasze biogazownie cechują się wysoką efektywnością i zerowym profilem
+                    odpadów, co czyni je idealnym wyborem dla <strong>zrównoważonego rozwoju</strong>. Wykorzystanie
+                    energii z odpadów to
+                    przyszłość, która maksymalizuje dostępne zasoby i minimalizuje negatywny wpływ na środowisko.
+                </p>
+                <div class="flex gap-3  form-button-container">
+                    <div data-tf-live="01JKX1N3Z03K8J5JDBFH4VP49H"></div>
+                    <script src="//embed.typeform.com/next/embed.js"></script>
                 </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8"
+            data-prompt="Write the stats for the stats section. The stats should be a percentage that includes the percentage symbol and a short description of the stat.">
+            <div class="border-l-2 border-l-white space-y-2 pl-8 py-3">
+                <h3 data-id="stat_1_percentage" class="font-extrabold text-balance text-5xl md:text-6xl lg:text-7xl">
+                    80%
+                </h3>
+                <p data-id="stat_1_description" class="font-bold text-wrap">
+                    Wykorzystanie odpadów organicznych do produkcji energii.
+                </p>
+            </div>
+
+            <div class="border-l-2 border-l-white space-y-2 pl-8 py-3">
+                <h3 data-id="stat_2_percentage" class="font-extrabold text-balance text-5xl md:text-6xl lg:text-7xl">
+                    90%
+                </h3>
+                <p data-id="stat_2_description" class="font-bold text-wrap">
+                    Redukcja emisji CO2 dzięki biogazowniom.
+                </p>
+            </div>
+
+            <div class="border-l-2 border-l-white space-y-2 pl-8 py-3">
+                <h3 data-id="stat_3_percentage" class="font-extrabold text-balance text-5xl md:text-6xl lg:text-7xl">
+                    100%
+                </h3>
+                <p data-id="stat_3_description" class="font-bold text-wrap">
+                    Efektywność przetwarzania odpadów w energię.
+                </p>
             </div>
         </div>
     </div>
 </section>
-<div>
-    <div>
-        <section>
-            <div class="p-4">
-                <div class="max-w-xl lg:max-w-5xl mx-auto xl:max-w-none px-5 md:px-12 xl:px-24 py-16 bg-teal-900 ">
-                    <div class="container mx-auto px-4">
-                        <div class="flex flex-wrap items-center -mx-4">
-                            <div class="w-full lg:w-2/3 px-4 mb-8 lg:mb-0">
-                                <div class="max-w-md xl:max-w-none">
-                                    <h1
-                                        class="font-heading text-4xl xs:text-5xl sm:text-6xl tracking-sm text-white mb-6">
-                                        Learn
-                                        Frontend Web Development</h1>
-                                    <p class="text-lg text-white opacity-80">Visit www.pixelrocket.store and learn how
-                                        to become a
-                                        frontend web developer</p>
-                                </div>
-                            </div>
-                            <div class="w-full lg:w-1/3 px-4 lg:text-right"><a
-                                    class="inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-teal-900 border border-lime-500 hover:border-white bg-lime-500 hover:bg-white  transition duration-200"
-                                    href="https://www.pixelrocket.store">Get Started</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
+<section class="py-24">
+    <hgroup class="space-y-4 text-center mb-14">
+        <h1 data-id="headline" class="font-extrabold text-balance text-5xl md:text-6xl lg:text-7xl">
+            Efektywność energetyczna
+        </h1>
+
+        <p data-id="sub_headline" class="max-w-3xl text-gray-700 mx-auto mt-8">
+            Poniżej znajdziesz szczegółowe informacje na temat mocy elektrycznej generowanej na 10 000 ton substratu
+            oraz ilości wymaganego substratu na 500 kW rocznie. Te dane są kluczowe dla zrozumienia efektywności naszych
+            biogazowni i ich wpływu na zrównoważony rozwój energetyczny.
+        </p>
+    </hgroup>
+    <div class="grid place-items-center">
+        <input id="search" type="text"
+            class="border border-gray-200 bg-white px-2 py-3 mb-6 outline-none ring-offset-0 focus:ring-2 focus:ring-lime-500 shadow"
+            placeholder="Szukaj substratu" onkeyup="searchTable()">
+
     </div>
-</div>
+    <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4 mx-auto">
+        <div class="block w-full overflow-x-auto">
+            <table class="items-center bg-transparent w-full border-collapse shadow-lg" id="table">
+                <thead class="bg-lime-700 text-white">
+                    <tr>
+                        <th
+                            class="px-6 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                            Substrat
+                        </th>
+                        <th
+                            class="px-6  align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                            Moc elektryczna na 10 000 ton substratu [kW]
+                        </th>
+                        <th
+                            class="px-6  align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                            Ilość ton substratu na 500 kW
+                        </th>
+                    </tr>
+                </thead>
+    
+                <tbody>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Banany
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            290
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            17 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Buraki cukrowe
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            400
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            13 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Cebule
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            280
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            18 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Gnojowica bydlęca
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            70
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            71 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Gnojowica świńska
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            60
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            83 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Kiszonka słonecznikowa
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            280
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            18 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Kiszonka z kukurydzy
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            570
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            9 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Kiszonka z liści buraków
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            190
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            26 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Kiszonka z lucerny
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            490
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            10 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Kiszonka z trawy
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            450
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            11 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Kiszonka z konopii
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            190
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            26 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Obornik bydlęcy
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            230
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            22 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Obornik indyczy
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            380
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            13 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Obornik koński
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            200
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            25 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Obornik kurzy
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            490
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            10 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Obornik owczy
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            310
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            16 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Obornik świński
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            240
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            21 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Odpadki chleba
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            1200
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            4 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Odpady kuchenne organiczne
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            170
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            29 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Odpady mięsne
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            600
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            8 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Odapdy warzyw
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            170
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            29 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Odpady żywności niskotłuszczowe
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            240
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            21 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Odpady żywności wysokotłuszczowe
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            410
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            12 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Odpady żywności średniotłuszczowe
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            310
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            16 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Olej rzepakowy
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            10
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            500 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Pełne mleko krowie, świeże
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            320
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            16 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Plewy pszeniczne
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            770
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            6 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Pogorzelniany wywar ziemniaczany
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            90
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            56 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Pulpa ziemniaczana
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            190
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            26 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Serwatka
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            110
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            45 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Suchy obornik drobiowy bez słomy
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            680
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            7 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Surowe obierzyny ziemniaczane
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            180
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            28 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Trawa sudańska, kiszonka
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            450
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            11 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Wysłodki buraka, prasowane, zakiszone
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            350
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            14 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Wytłoki jabłkowe
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            300
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            17 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Wytłoki z owoców
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            290
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            17 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Wywar gorzelniany
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            110
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            45 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Wywar gorzelniany, pszeniczny
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            110
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            45 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Zawartość żołądków wieprzowych
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            140
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            36 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Ziemniaki
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            300
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            17 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Śruta poekstrakcyjna rzepakowa
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            1600
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            3 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Śruta żytnio-pszeniczna
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            1600
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            3 000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                            Żyto - kiszonka z całych rośliń
+                        </th>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                            540
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            9 000
+                        </td>
+                    </tr>
+    
+                </tbody>
+    
+            </table>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    let search = document.getElementById('search');
+    let table = document.getElementById('table');
+
+    function searchTable() {
+        let filter = search.value.toUpperCase();
+        let tr = table.getElementsByTagName('tr');
+
+        for (var i = 1; i < tr.length; i++) { // Start from 1 to skip thead row
+            let td = tr[i].getElementsByTagName('th')[0];
+            if (td) {
+                let textValue = td.textContent || td.innerText;
+                if (textValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = '';
+                } else {
+                    tr[i].style.display = 'none';
+                }
+            }
+        }
+    }
+
+</script>
+
 {% endblock %}
