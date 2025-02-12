@@ -65,7 +65,7 @@ permalink: "/"
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <img src="/assets/swiper/biogas.webp" alt="" />
-                <div class="absolute top-0 left-0 w-full h-full bg-black/60 backdrop-blur-xs">
+                <div class="absolute top-0 left-0 w-full h-full bg-black/50 backdrop-blur-xs">
                     <div class="container mx-auto px-4 h-full flex flex-col justify-center items-start gap-4">
                         <h2 class="uppercase text-gray-200 font-semibold">
                             Reużywanie odpadów
@@ -84,7 +84,7 @@ permalink: "/"
             </div>
             <div class="swiper-slide">
                 <img src="/assets/swiper/solar-farm.webp" alt="" />
-                <div class="absolute top-0 left-0 w-full h-full bg-black/60 backdrop-blur-xs">
+                <div class="absolute top-0 left-0 w-full h-full bg-black/50 backdrop-blur-xs">
                     <div class="container mx-auto px-4 h-full flex flex-col justify-center items-start gap-4">
                         <h2 class="uppercase text-gray-200 font-semibold">
                             Energia słoneczna
@@ -104,7 +104,7 @@ permalink: "/"
             </div>
             <div class="swiper-slide">
                 <img src="/assets/swiper/batteries.webp" alt="" />
-                <div class="absolute top-0 left-0 w-full h-full bg-black/60 backdrop-blur-xs">
+                <div class="absolute top-0 left-0 w-full h-full bg-black/50 backdrop-blur-xs">
                     <div class="container mx-auto px-4 h-full flex flex-col justify-center items-start gap-4">
                         <h2 class="uppercase text-gray-200 font-semibold">
                             Magazyny energii
@@ -178,7 +178,7 @@ permalink: "/"
         {% else %}
         {%- for post in collections.post | reverse -%}
         {% if loop.index0 < 2 %} <div
-            class="shadow-md grid grid-cols-1 sm:grid-cols-2 items-center lg:row-span-1 lg:col-span-1 bg-white">
+            class="shadow-md hover:shadow-lg grid grid-cols-1 sm:grid-cols-2 items-center lg:row-span-1 lg:col-span-1 bg-white border-t-4 border-lime-700">
             <hgroup class="space-y-1 p-5">
                 <p data-id="benefit_1_tagline" class="text-gray-500 text-sm">{{ post.data.date.toLocaleDateString() }}
                 </p>
@@ -397,69 +397,70 @@ permalink: "/"
     </div>
 </section>
 
-<section class="py-12 lg:py-24 overflow-hidden" x-data="{ activeSlide: 1, slideCount: 3 }">
-    <div class="container mx-auto px-4">
-        <div class="flex flex-wrap items-center -mx-4">
-            <div class="w-full md:w-1/2 px-4 mb-12 md:mb-0">
-                <div class="max-w-lg mx-auto md:mx-0 overflow-hidden">
-                    <div class="flex -mx-4 transition-transform duration-500"
-                        :style="'transform: translateX(-' + (activeSlide - 1) * 100 + '%)'"><img
-                            class="block flex-shrink-0 w-full px-4" src="./assets/testimonials/photo-lg.png"
-                            alt="" /><img class="block flex-shrink-0 w-full px-4"
-                            src="./assets/testimonials/photo-lg.png" alt="" /><img
-                            class="block flex-shrink-0 w-full px-4" src="./assets/testimonials/photo-lg.png" alt="" />
-                    </div>
-                </div>
-            </div>
-            <div class="w-full md:w-1/2 px-4">
-                <div class="max-w-lg mx-auto md:mr-0 overflow-hidden">
-                    <div class="flex -mx-4 transition-transform duration-500"
-                        :style="'transform: translateX(-' + (activeSlide - 1) * 100 + '%)'">
-                        <div class="flex-shrink-0 px-4 w-full">
-                            <h4 class="text-3xl lg:text-4xl font-medium mb-10">“Flow transformed my energy use.
-                                Efficient, green tech, outstanding service!”</h4><span
-                                class="block text-xl font-medium">Jenny Wilson</span> <span
-                                class="block mb-12 lg:mb-32 text-lg text-gray-700">Solar energy service</span>
-                        </div>
-                        <div class="flex-shrink-0 px-4 w-full">
-                            <h4 class="text-3xl lg:text-4xl font-medium mb-10">“Efficient, green tech, outstanding
-                                service”</h4><span class="block text-xl font-medium">John Jones</span> <span
-                                class="block mb-12 lg:mb-32 text-lg text-gray-700">CE0 Solar Company</span>
-                        </div>
-                        <div class="flex-shrink-0 px-4 w-full">
-                            <h4 class="text-3xl lg:text-4xl font-medium mb-10">“Flow transformed my energy use,
-                                efficient, green tech, outstanding service.”</h4><span
-                                class="block text-xl font-medium">James Harrison</span> <span
-                                class="block mb-12 lg:mb-32 text-lg text-gray-700">Developer</span>
-                        </div>
-                    </div>
-                    <div>
-                        <button class="inline-block mr-4 text-gray-700 hover:text-lime-500"
-                            x-on:click="activeSlide = activeSlide &gt; 1 ? activeSlide - 1 : slideCount">
-                            <svg width="32" height="32" viewbox="0 0 32 32" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M24.4 16H7.59998" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path d="M16 24.4L7.59998 16L16 7.59998" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </button>
-                        <button class="inline-block text-gray-700 hover:text-lime-500"
-                            x-on:click="activeSlide = activeSlide &lt; slideCount ? activeSlide + 1 : 1">
-                            <svg width="32" height="32" viewbox="0 0 32 32" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.59998 16H24.4" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path d="M16 7.59998L24.4 16L16 24.4" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
+<section
+  class="container mx-auto px-3 sm:px-5 md:px-8 lg:px-12 space-y-10 py-40 lg:space-y-14"
+>
+  <hgroup class="space-y-4 text-center">
+    <h2
+      data-id="title"
+      class="font-bold text-balance text-4xl md:text-5xl lg:text-6xl"
+    >
+      A medium length section heading goes here
+    </h2>
+    <p data-id="subtitle">
+      A medium length explanation of the heading goes here.
+    </p>
+  </hgroup>
+
+  <div class="text-center grid grid-cols-1 md:grid-cols-2 gap-20">
+    <div class="space-y-8">
+      <div>
+        <span class="font-extrabold text-xl tracking-widest">Company Inc.</span>
+      </div>
+
+      <blockquote class="font-bold text-lg md:text-2xl max-w-3xl mx-auto">
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+        ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
+      </blockquote>
+
+      <div class="space-y-3">
+        <div>
+          <img src="https://placehold.co/60" class="mx-auto rounded-full" />
         </div>
+
+        <div>
+          <p class="font-semibold">Name Last name</p>
+          <p>Position, Company name</p>
+        </div>
+      </div>
     </div>
+
+    <div class="space-y-8">
+      <div>
+        <span class="font-extrabold text-xl tracking-widest">Company Inc.</span>
+      </div>
+
+      <blockquote class="font-bold text-lg md:text-2xl max-w-3xl mx-auto">
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+        ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
+      </blockquote>
+
+      <div class="space-y-3">
+        <div>
+          <img src="https://placehold.co/60" class="mx-auto rounded-full" />
+        </div>
+
+        <div>
+          <p class="font-semibold">Name Last name</p>
+          <p>Position, Company name</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <section class="relative text-white">
     <div class="absolute inset-0 -z-10">
         <img src="https://placehold.co/600" class="w-full h-full object-cover" />
