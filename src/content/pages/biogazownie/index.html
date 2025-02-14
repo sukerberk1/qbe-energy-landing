@@ -19,6 +19,10 @@ hideOnDesktop: true
         border-radius: 0 !important;
         background-color: var(--color-teal-600) !important;
         transition: 200ms ease !important;
+        font-family: var( --default-font-family, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' ) !important;
+        padding-inline: calc(var(--spacing) * 4) !important;
+        padding-block: calc(var(--spacing) * 1) !important;
+        font-size: var(--text-lg) !important;
     }
 
     .form-button-container>div>button:hover {
@@ -121,8 +125,8 @@ hideOnDesktop: true
 
     </div>
     <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4 mx-auto">
-        <div class="block w-full overflow-x-auto">
-            <table class="items-center bg-transparent w-full border-collapse shadow-lg" id="table">
+        <div class="block w-full overflow-x-auto shadow-xl">
+            <table class="items-center bg-transparent w-full border-collapse" id="table">
                 <thead class="bg-lime-700 text-white">
                     <tr>
                         <th

@@ -1,13 +1,13 @@
 ---
-title: Sucos Creati
-url: sucos-creati
+title: Fotowoltaika - hit czy kit?
+url: energia-fotowoltaiczna-hit-czy-kit
 description: Lorem markdownum Talia. Carinae equis.
 author: Code Stitch
-date: 2023-06-08T15:27:34.591Z
+date: 2025-02-14T15:24:00.000Z
 tags:
-    - post
-image: /assets/images/blog/landing.jpg
-imageAlt: Kitchen
+  - post
+image: /assets/images/blog/wiatrak.jpg
+imageAlt: Fotowoltaika
 ---
 
 ## Hospes meus

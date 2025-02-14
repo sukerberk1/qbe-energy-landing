@@ -1,14 +1,14 @@
 ---
-title: Canitiem Saxa
-url: canitiem-saxa
+title: Zielone zasilanie gospodarstw
+url: zielone-zasilanie-gospodarstw
 description: Lorem markdownum trabeati dicere deus.
 author: Code Stitch
 date: 2023-06-08T15:28:08.486Z
 tags:
-    - post
-    - featured
-image: /assets/images/blog/landing.jpg
-imageAlt: Kitchen
+  - post
+  - featured
+image: /assets/images/blog/bulb-ecology.jpg
+imageAlt: Bulb
 ---
 
 ## Aut inter Petraeum

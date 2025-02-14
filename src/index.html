@@ -97,7 +97,7 @@ permalink: "/"
                             w elektryczność, przyczyniając się do zrównoważonego rozwoju i ochrony środowiska. Dzięki
                             nowoczesnym technologiom, proces ten jest nie tylko efektywny, ale także przyjazny dla
                             planety.</p>
-                            <a class="mt-2 inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-white hover:border-lime-600 bg-teal-600 hover:bg-lime-600  transition duration-200"
+                        <a class="mt-2 inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-white hover:border-lime-600 bg-teal-600 hover:bg-lime-600  transition duration-200"
                             href="/fotowoltaika">Dowiedz się więcej</a>
                     </div>
                 </div>
@@ -118,7 +118,7 @@ permalink: "/"
                             energii, co zwiększa niezależność energetyczną gospodarstw domowych i firm. Dzięki
                             nowoczesnym technologiom, proces ten jest nie tylko efektywny, ale także przyjazny dla
                             środowiska.</p>
-                            <a class="mt-2 inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-white hover:border-lime-600 bg-teal-600 hover:bg-lime-600  transition duration-200"
+                        <a class="mt-2 inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-white hover:border-lime-600 bg-teal-600 hover:bg-lime-600  transition duration-200"
                             href="/banki-energii">Dowiedz się więcej</a>
                     </div>
                 </div>
@@ -158,9 +158,7 @@ permalink: "/"
     </div>
 </section>
 
-<hr />
-
-<section class="container mx-auto px-3 sm:px-5 md:px-8 lg:px-12 space-y-14 py-14 items-center md:gap-10">
+<section class="container mx-auto px-3 sm:px-5 md:px-8 lg:px-12 space-y-14 py-2 pb-12 items-center md:gap-10">
     <hgroup class="space-y-2 text-center" data-prompt="Create the copy for a heading group.">
         <p data-id="tagline">Aktualności</p>
         <h2 data-id="title" class="font-bold text-balance text-3xl md:text-4xl lg:text-5xl mb-4">
@@ -190,7 +188,7 @@ permalink: "/"
                     {{ post.data.description }}
                 </p>
 
-                <a class="py-2 inline-flex items-center gap-2 underline hover:text-lime-600" href="{{ post.url }}">
+                <a class="py-2 inline-flex items-center gap-2 underline hover:text-lime-600 text-teal-700" href="{{ post.url }}">
                     <span>Czytaj dalej</span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-4">
@@ -208,9 +206,14 @@ permalink: "/"
     {%- endfor -%}
     {% endif %}
     </div>
+    <div class="grid place-items-center">
+        <p>lub <a href="/blog" class="underline inline-flex items-center hover:text-lime-600 text-teal-700">zobacz wszystkie <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5">
+                    </path>
+                </svg></a></p>
+    </div>
 </section>
-
-<hr />
 
 <section
     class="container mx-auto px-3 sm:px-5 md:px-8 lg:px-12 space-y-10 py-12 grid grid-cols-1 md:grid-cols-2 items-center md:gap-10"
@@ -397,68 +400,63 @@ permalink: "/"
     </div>
 </section>
 
-<section
-  class="container mx-auto px-3 sm:px-5 md:px-8 lg:px-12 space-y-10 py-40 lg:space-y-14"
->
-  <hgroup class="space-y-4 text-center">
-    <h2
-      data-id="title"
-      class="font-bold text-balance text-4xl md:text-5xl lg:text-6xl"
-    >
-      A medium length section heading goes here
-    </h2>
-    <p data-id="subtitle">
-      A medium length explanation of the heading goes here.
-    </p>
-  </hgroup>
+<section class="container mx-auto px-3 sm:px-5 md:px-8 lg:px-12 space-y-10 py-40 lg:space-y-14">
+    <hgroup class="space-y-4 text-center">
+        <h2 data-id="title" class="font-bold text-balance text-4xl md:text-5xl lg:text-6xl">
+            A medium length section heading goes here
+        </h2>
+        <p data-id="subtitle">
+            A medium length explanation of the heading goes here.
+        </p>
+    </hgroup>
 
-  <div class="text-center grid grid-cols-1 md:grid-cols-2 gap-20">
-    <div class="space-y-8">
-      <div>
-        <span class="font-extrabold text-xl tracking-widest">Company Inc.</span>
-      </div>
+    <div class="text-center grid grid-cols-1 md:grid-cols-2 gap-20">
+        <div class="space-y-8">
+            <div>
+                <span class="font-extrabold text-xl tracking-widest">Company Inc.</span>
+            </div>
 
-      <blockquote class="font-bold text-lg md:text-2xl max-w-3xl mx-auto">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-        ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
-      </blockquote>
+            <blockquote class="font-bold text-lg md:text-2xl max-w-3xl mx-auto">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+                ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
+            </blockquote>
 
-      <div class="space-y-3">
-        <div>
-          <img src="https://placehold.co/60" class="mx-auto rounded-full" />
+            <div class="space-y-3">
+                <div>
+                    <img src="https://placehold.co/60" class="mx-auto rounded-full" />
+                </div>
+
+                <div>
+                    <p class="font-semibold">Name Last name</p>
+                    <p>Position, Company name</p>
+                </div>
+            </div>
         </div>
 
-        <div>
-          <p class="font-semibold">Name Last name</p>
-          <p>Position, Company name</p>
+        <div class="space-y-8">
+            <div>
+                <span class="font-extrabold text-xl tracking-widest">Company Inc.</span>
+            </div>
+
+            <blockquote class="font-bold text-lg md:text-2xl max-w-3xl mx-auto">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+                ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
+            </blockquote>
+
+            <div class="space-y-3">
+                <div>
+                    <img src="https://placehold.co/60" class="mx-auto rounded-full" />
+                </div>
+
+                <div>
+                    <p class="font-semibold">Name Last name</p>
+                    <p>Position, Company name</p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-
-    <div class="space-y-8">
-      <div>
-        <span class="font-extrabold text-xl tracking-widest">Company Inc.</span>
-      </div>
-
-      <blockquote class="font-bold text-lg md:text-2xl max-w-3xl mx-auto">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-        ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
-      </blockquote>
-
-      <div class="space-y-3">
-        <div>
-          <img src="https://placehold.co/60" class="mx-auto rounded-full" />
-        </div>
-
-        <div>
-          <p class="font-semibold">Name Last name</p>
-          <p>Position, Company name</p>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
 <section class="relative text-white">
