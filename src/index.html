@@ -160,7 +160,7 @@ permalink: "/"
 
 <section class="container mx-auto px-3 sm:px-5 md:px-8 lg:px-12 space-y-14 py-2 pb-12 items-center md:gap-10">
     <hgroup class="space-y-2 text-center" data-prompt="Create the copy for a heading group.">
-        <p data-id="tagline">Aktualności</p>
+        <p data-id="tagline" class="uppercase text-gray-700 font-semibold">Aktualności</p>
         <h2 data-id="title" class="font-bold text-balance text-3xl md:text-4xl lg:text-5xl mb-4">
             Zobacz jak <span class="text-lime-600">zmieniamy energetykę</span>
         </h2>
@@ -188,7 +188,8 @@ permalink: "/"
                     {{ post.data.description }}
                 </p>
 
-                <a class="py-2 inline-flex items-center gap-2 underline hover:text-lime-600 text-teal-700" href="{{ post.url }}">
+                <a class="py-2 inline-flex items-center gap-2 underline hover:text-lime-600 text-teal-700"
+                    href="{{ post.url }}">
                     <span>Czytaj dalej</span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-4">
@@ -207,8 +208,9 @@ permalink: "/"
     {% endif %}
     </div>
     <div class="grid place-items-center">
-        <p>lub <a href="/blog" class="underline inline-flex items-center hover:text-lime-600 text-teal-700">zobacz wszystkie <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+        <p>lub <a href="/blog" class="underline inline-flex items-center hover:text-lime-600 text-teal-700">zobacz
+                wszystkie <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-4">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5">
                     </path>
                 </svg></a></p>
@@ -216,185 +218,176 @@ permalink: "/"
 </section>
 
 <section
-    class="container mx-auto px-3 sm:px-5 md:px-8 lg:px-12 space-y-10 py-12 grid grid-cols-1 md:grid-cols-2 items-center md:gap-10"
+    class="container mx-auto px-3 sm:px-5 md:px-8 lg:px-12 space-y-10 py-20 grid grid-cols-1 md:grid-cols-2 items-center md:gap-10"
     data-prompt="Write the headings for the benefits section">
     <div class="space-y-4">
         <hgroup class="space-y-4">
-            <p data-id="tagline">Tagline</p>
+            <p data-id="tagline" class="uppercase text-lime-700 font-semibold">Przyszłość zrównoważonego rolnictwa</p>
             <h2 data-id="headline" class="font-bold text-balance text-4xl md:text-5xl lg:text-6xl">
-                A medium length section heading goes here
+                Odnawialna <span class="text-lime-600">energia</span> i <span class="text-lime-600">wtórne</span> wykorzystanie surowców
             </h2>
 
             <p data-id="sub_headline">
-                A short description of how the user can get the benefit outlined in the
-                main heading above.
+                Odkryj, jak odnawialna energia i wtórne wykorzystanie surowców mogą przyczynić się do zrównoważonego rozwoju rolnictwa, zwiększając efektywność i ochronę środowiska.
             </p>
         </hgroup>
-
-        <div class="flex gap-4">
-            <button data-id="primary_call_to_action_button" data-variant="secondary" data-size="primary"
-                class="focus-visible:ring-black inline-flex gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-black text-black bg-white px-6 py-3">
-                Button
-            </button>
-
-            <button data-id="secondary_call_to_action_button" data-variant="tertiary" data-size="primary"
-                class="focus-visible:ring-black inline-flex gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-black px-6 py-3">
-                Button <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-4">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5">
-                    </path>
-                </svg>
-            </button>
-        </div>
     </div>
 
     <div>
-        <img src="https://placehold.co/400" class="w-full" />
+        <img src="https://imgproxy.divecdn.com/LNGwJsXgR9U1DNIEUEkayewZJM_P0xN5Z1LIrYAt4gQ/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMzU4NDUwMTkyLmpwZw==.webp" class="w-full" />
     </div>
 </section>
 
-<section class="relative text-white">
-    <div class="absolute inset-0 -z-10">
-        <img src="https://placehold.co/600" class="w-full h-full object-cover" />
-
-        <div class="absolute inset-0 bg-black/50"></div>
-    </div>
-
-    <div class="container mx-auto px-3 sm:px-5 md:px-8 lg:px-12 space-y-10 py-24 lg:space-y-14">
-        <hgroup class="grid grid-cols-1 md:grid-cols-2 gap-8"
-            data-prompt="Write the headings for the stats section. The description should described how the company achieved the stats and highlight why it is valuable to the user that is reading it.">
-            <h2 data-id="title" class="font-bold text-balance text-4xl md:text-5xl lg:text-6xl">
-                A medium length section heading goes here
-            </h2>
-
-            <p data-id="description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-                ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
-                Suspendisse varius enim in eros elementum tristique. Duis cursus, mi
-                quis viverra ornare, eros dolor interdum nulla.
-            </p>
-        </hgroup>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8"
-            data-prompt="Write the stats for the stats section. The stats should be a percentage that includes the percentage symbol and a short description of the stat.">
-            <div class="border-l-2 border-l-white space-y-2 pl-8 py-3">
-                <h3 data-id="stat_1_percentage" class="font-extrabold text-balance text-5xl md:text-6xl lg:text-7xl">
-                    60%
-                </h3>
-                <p data-id="stat_1_description" class="font-bold text-wrap">
-                    Short description here.
-                </p>
-            </div>
-
-            <div class="border-l-2 border-l-white space-y-2 pl-8 py-3">
-                <h3 data-id="stat_2_percentage" class="font-extrabold text-balance text-5xl md:text-6xl lg:text-7xl">
-                    60%
-                </h3>
-                <p data-id="stat_2_description" class="font-bold text-wrap">
-                    Short description here.
-                </p>
-            </div>
-
-            <div class="border-l-2 border-l-white space-y-2 pl-8 py-3">
-                <h3 data-id="stat_3_percentage" class="font-extrabold text-balance text-5xl md:text-6xl lg:text-7xl">
-                    60%
-                </h3>
-                <p data-id="stat_3_description" class="font-bold text-wrap">
-                    Short description here.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="container mx-auto px-3 sm:px-5 md:px-8 lg:px-12 space-y-10 py-12 items-center md:gap-10">
-    <hgroup class="space-y-2 text-center" data-prompt="Create the copy for a heading group.">
-        <p data-id="tagline">Tagline</p>
-        <h2 data-id="title" class="font-bold text-balance text-3xl md:text-4xl lg:text-5xl">
-            A medium length section heading goes here
+<section class="container mx-auto px-3 sm:px-5 md:px-8 lg:px-12 space-y-10 py-12 lg:space-y-14">
+    <hgroup class="text-center space-y-2 md:space-y-4" data-prompt="Write a heading group for this section.">
+        <p data-id="tagline" class="uppercase text-lime-700 font-semibold">Odkryj naszą ofertę</p>
+        <h2 data-id="title" class="font-bold text-balance text-3xl md:text-4xl lg:text-5xl max-w-3xl mx-auto">
+            <span class="text-lime-600">Innowacyjne</span> sposoby na energię dla <span class="text-lime-600">twojego gospodarstwa</span>
         </h2>
         <p data-id="subtitle">
-            A medium length explanation of the heading goes here.
+            Poznaj nasze innowacyjne rozwiązania w zakresie energii odnawialnej, które przyczyniają się do zrównoważonego rozwoju i ochrony środowiska.
         </p>
     </hgroup>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6"
-        data-prompt="Write a benefit with a title with a description where the titles lay out the key benefits with going to this company and the description go into the services and/or features that the company has to offer. The benefits should explain the perks that this company brings.">
-        <div class="border border-black grid grid-cols-1 sm:grid-cols-2 items-center lg:row-span-1 lg:col-span-1">
-            <hgroup class="space-y-1 p-5">
-                <p data-id="benefit_1_tagline">Tagline</p>
-                <h4 data-id="benefit_1_title" class="font-bold text-balance text-xl md:text-2xl lg:text-3xl">
-                    A medium length section heading goes here.
-                </h4>
-
-                <p data-id="benefit_1_description">
-                    A medium length explanation of the heading goes here.
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="border-t-4 border-lime-700 p-6 text-center flex flex-col gap-8 bg-white shadow-md">
+            <hgroup class="space-y-3">
+                <p data-id="offer_1_title" class="font-bold text-balance text-xl text-lime-700">
+                    Biogazownie
                 </p>
 
-                <button class="py-2 inline-flex items-center gap-2">
-                    <span data-id="benefit_1_button_text">Button</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="size-4">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5">
-                        </path>
-                    </svg>
-                </button>
+                <h2 data-id="offer_1_subtitle" class="font-bold text-balance text-2xl md:text-3xl lg:text-4xl">
+                    Przekształć odpady w energię
+                </h2>
             </hgroup>
 
-            <div>
-                <img src="https://placehold.co/200" class="w-full" />
+            <ul class="space-y-4">
+                <li class="flex items-center gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5">
+                        </path>
+                    </svg>
+                    <span data-id="offer_1_feature_1">Efektywne przetwarzanie odpadów</span>
+                </li>
+
+                <li class="flex items-center gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5">
+                        </path>
+                    </svg>
+                    <span data-id="offer_1_feature_2">Zrównoważony rozwój</span>
+                </li>
+
+                <li class="flex items-center gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5">
+                        </path>
+                    </svg>
+                    <span data-id="offer_1_feature_3">Ochrona środowiska</span>
+                </li>
+            </ul>
+
+            <div class="grow flex flex-col justify-end">
+                <a href="/biogazownie" data-id="offer_1_call_to_action_button" class="bg-black px-5 py-3 text-center text-white w-full bg-teal-600 hover:bg-lime-600 transition font-semibold">
+                    Dowiedz się więcej
+                </a>
             </div>
         </div>
 
-        <div class="border border-black grid grid-cols-1 sm:grid-cols-2 items-center lg:row-span-1 lg:col-span-1">
-            <hgroup class="space-y-1 p-5">
-                <p data-id="benefit_2_tagline">Tagline</p>
-                <h4 data-id="benefit_2_title" class="font-bold text-balance text-xl md:text-2xl lg:text-3xl">
-                    A medium length section heading goes here.
-                </h4>
-
-                <p data-id="benefit_2_description">
-                    A medium length explanation of the heading goes here.
+        <div class="border-t-4 border-lime-700 p-6 text-center flex flex-col gap-8 bg-white shadow-md">
+            <hgroup class="space-y-3">
+                <p data-id="offer_2_title" class="font-bold text-balance text-xl text-lime-700">
+                    Banki energii
                 </p>
 
-                <button class="py-2 inline-flex items-center gap-2">
-                    <span data-id="benefit_2_button_text">Button</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="size-4">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5">
-                        </path>
-                    </svg>
-                </button>
+                <h2 data-id="offer_2_subtitle" class="font-bold text-balance text-2xl md:text-3xl lg:text-4xl">
+                    Magazynuj nadmiar energii
+                </h2>
             </hgroup>
 
-            <div>
-                <img src="https://placehold.co/200" class="w-full" />
+            <ul class="space-y-4">
+                <li class="flex items-center gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5">
+                        </path>
+                    </svg>
+                    <span data-id="offer_2_feature_1">Niezależność energetyczna</span>
+                </li>
+
+                <li class="flex items-center gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5">
+                        </path>
+                    </svg>
+                    <span data-id="offer_2_feature_2">Efektywne przechowywanie energii</span>
+                </li>
+
+                <li class="flex items-center gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5">
+                        </path>
+                    </svg>
+                    <span data-id="offer_2_feature_3">Przyjazne dla środowiska</span>
+                </li>
+            </ul>
+
+            <div class="grow flex flex-col justify-end">
+                <a href="/banki-energii" data-id="offer_2_call_to_action_button" class="bg-black px-5 py-3 text-center text-white w-full bg-teal-600 hover:bg-lime-600 transition font-semibold">
+                    Dowiedz się więcej
+                </a>
             </div>
         </div>
 
-        <div class="border border-black grid grid-cols-1 items-center lg:row-span-2 lg:row-start-1 lg:col-start-2">
-            <hgroup class="space-y-1 p-5">
-                <p data-id="benefit_3_tagline">Tagline</p>
-                <h3 data-id="benefit_3_title" class="font-bold text-balance text-2xl md:text-3xl lg:text-4xl">
-                    A medium length section heading goes here.
-                </h3>
-
-                <p data-id="benefit_3_description">
-                    A medium length explanation of the heading goes here.
+        <div class="border-t-4 border-lime-700 p-6 text-center flex flex-col gap-8 bg-white shadow-md">
+            <hgroup class="space-y-3">
+                <p data-id="offer_3_title" class="font-bold text-balance text-xl text-lime-700">
+                    Fotowoltaika
                 </p>
 
-                <button class="py-2 inline-flex items-center gap-2">
-                    <span data-id="benefit_3_button_text">Button</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="size-4">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5">
-                        </path>
-                    </svg>
-                </button>
+                <h2 data-id="offer_3_subtitle" class="font-bold text-balance text-2xl md:text-3xl lg:text-4xl">
+                    Wykorzystaj energię od słońca
+                </h2>
             </hgroup>
 
-            <div class="w-full h-full">
-                <img src="https://placehold.co/200x100" class="w-full h-full object-cover" />
+            <ul class="space-y-4">
+                <li class="flex items-center gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5">
+                        </path>
+                    </svg>
+                    <span data-id="offer_3_feature_1">Efektywne panele słoneczne</span>
+                </li>
+
+                <li class="flex items-center gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5">
+                        </path>
+                    </svg>
+                    <span data-id="offer_3_feature_2">Zrównoważony rozwój</span>
+                </li>
+
+                <li class="flex items-center gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5">
+                        </path>
+                    </svg>
+                    <span data-id="offer_3_feature_3">Ochrona środowiska</span>
+                </li>
+            </ul>
+
+            <div class="grow flex flex-col justify-end">
+                <a href="/fotowoltaika" data-id="offer_3_call_to_action_button" class="bg-black px-5 py-3 text-center text-white w-full bg-teal-600 hover:bg-lime-600 transition font-semibold">
+                    Dowiedz się więcej
+                </a>
             </div>
         </div>
     </div>
