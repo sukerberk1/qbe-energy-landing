@@ -2,37 +2,31 @@
 <!--             Final Call to Action             -->
 <!-- ============================================ -->
 
-<section id="cta">
-    <div class="container">
-        <h2 class="title">
-            Get It Done
-            <br />
-            With Us Today
-        </h2>
-        <p>
-            Say something catchy, informative, and encouraging to click the
-            button to go to the contact page. I like to add these to the bottom
-            of all pages.
-        </p>
-        <a href="/contact" class="cs-button-solid">Get an Estimate Now</a>
+<section class="relative text-white m-5 mt-14">
+    <div class="absolute inset-0 -z-10">
+        <img src="/assets/images/biogas-plant-1.webp" class="w-full h-full object-cover" />
+
+        <div class="absolute inset-0 backdrop-blur-sm" style="background-color: rgba(0, 0, 0, 0.5);"></div>
     </div>
-    <picture>
-        <source
-            media="(max-width: 600px)"
-            srcset="/assets/images/cabinets2-m.jpg"
-        />
-        <source
-            media="(min-width: 601px)"
-            srcset="/assets/images/cabinets2.jpg"
-        />
-        <img
-            aria-hidden="true"
-            decoding="async"
-            src="/assets/images/cabinets2.jpg"
-            alt="kitchen cabinets"
-            loading="lazy"
-            width="2500"
-            height="1667"
-        />
-    </picture>
+
+    <div class="container mx-auto px-3 sm:px-5 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20"
+        data-prompt="Create the copy for a heading group.">
+        <div class="space-y-4">
+            <hgroup class="space-y-4">
+                <h2 data-id="headline" class="font-bold text-balance text-4xl md:text-5xl lg:text-6xl">
+                    Odezwij się do nas aby <span class="text-lime-500">odmienić energetykę</span> swojego gospodarstwa
+                </h2>
+
+                <p data-id="sub_headline" class="text-gray-200">
+                    Skontaktuj się z nami, aby dowiedzieć się, jak nasze rozwiązania mogą pomóc w transformacji
+                    energetycznej Twojego gospodarstwa.
+                </p>
+            </hgroup>
+
+            <div class="flex gap-4">
+                <a class="mt-2 inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-white hover:border-lime-600 bg-teal-600 hover:bg-lime-600  transition duration-200"
+                    href="/kontakt">Skontaktuj się</a>
+            </div>
+        </div>
+    </div>
 </section>
