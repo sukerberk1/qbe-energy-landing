@@ -44,6 +44,9 @@
     <link rel="preload" as="image" href="{{ preloadImg }}" />
     {% endif %}
 
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="/assets/css/aos/aos.css">
+
     {% block head %}{% endblock %}
 
     <title>{{ title }}</title>
@@ -196,6 +199,16 @@
         nav.classList.add('text-black');
         nav.classList.remove('bg-transparent');
         nav.classList.remove('text-white');
+    });
+</script>
+
+<!-- <script src="/assets/js/aos.js"></script> -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 400, // values from 0 to 3000, with step 50ms
+        once: true, // whether animation should happen only once - while scrolling down
+        easing: 'ease-in-out', // default easing for AOS animations
     });
 </script>
 
