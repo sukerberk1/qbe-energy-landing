@@ -133,7 +133,6 @@ permalink: "biogazownie/"
         </div>
     </div>
 </section>
-
 <section class="py-24">
     <hgroup class="space-y-4 text-center mb-14" data-aos="fade-up" data-aos-delay="100">
         <h1 data-id="headline" class="font-extrabold text-balance text-5xl md:text-6xl lg:text-7xl">
@@ -141,585 +140,126 @@ permalink: "biogazownie/"
         </h1>
 
         <p data-id="sub_headline" class="max-w-3xl text-gray-700 mx-auto mt-8">
-            Poniżej znajdziesz szczegółowe informacje na temat mocy elektrycznej generowanej na 10 000 ton substratu
-            oraz ilości wymaganego substratu na 500 kW rocznie. Te dane są kluczowe dla zrozumienia efektywności naszych
-            biogazowni i ich wpływu na zrównoważony rozwój energetyczny.
+            Poniżej znajdziesz kalkulator energii, który pozwala obliczyć, ile energii można uzyskać z biogazowni na podstawie masy substratu. Zaleca się podawanie masy substratów w rocznym okresie, aby uzyskać dokładniejsze wyniki dotyczące efektywności energetycznej.
         </p>
     </hgroup>
-    <div class="grid place-items-center">
-        <input id="search" type="text"
-            class="border border-gray-200 bg-white px-2 py-3 mb-6 outline-none ring-offset-0 focus:ring-2 focus:ring-lime-500 shadow"
-            placeholder="Szukaj substratu" onkeyup="searchTable()">
 
+    <div class="flex flex-col gap-4 items-center mx-4" data-aos="fade-up" data-aos-delay="150">
+        <label for="category" class="text-lg font-semibold">Kategoria:</label>
+        <select id="category" class="border border-gray-300 rounded px-4 py-2 w-full max-w-md">
+            <option value="">-- Wybierz kategorię --</option>
+        </select>
+        
+        <label for="type" class="text-lg font-semibold">Wybierz substrat:</label>
+        <select id="type" class="border border-gray-300 rounded px-4 py-2 w-full max-w-md" disabled>
+            <option value="">-- Wybierz substrat --</option>
+        </select>
+        
+        <label for="mass" class="text-lg font-semibold">Masa substratu (w tonach):</label>
+        <input type="number" id="mass" class="border border-gray-300 rounded px-4 py-2 w-full max-w-md" disabled>
+        
+        <button id="calculate" class="bg-lime-700 text-white font-semibold px-6 py-2 rounded mt-4 hover:bg-lime-600 transition duration-200" disabled>Oblicz uzyskaną energię</button>
+        
+        <div class="output text-lg font-semibold mt-4" id="output"></div>
     </div>
-    <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4 mx-auto">
-        <div class="block w-full overflow-x-auto shadow-xl">
-            <table class="items-center bg-transparent w-full border-collapse" id="table">
-                <thead class="bg-lime-700 text-white">
-                    <tr>
-                        <th
-                            class="px-6 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                            Substrat
-                        </th>
-                        <th
-                            class="px-6  align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                            Moc elektryczna na 10 000 ton substratu [kW]
-                        </th>
-                        <th
-                            class="px-6  align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                            Ilość ton substratu na 500 kW
-                        </th>
-                    </tr>
-                </thead>
+
     
-                <tbody>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Banany
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            290
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            17 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Buraki cukrowe
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            400
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            13 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Cebule
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            280
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            18 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Gnojowica bydlęca
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            70
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            71 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Gnojowica świńska
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            60
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            83 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Kiszonka słonecznikowa
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            280
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            18 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Kiszonka z kukurydzy
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            570
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            9 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Kiszonka z liści buraków
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            190
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            26 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Kiszonka z lucerny
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            490
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            10 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Kiszonka z trawy
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            450
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            11 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Kiszonka z konopii
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            190
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            26 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Obornik bydlęcy
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            230
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            22 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Obornik indyczy
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            380
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            13 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Obornik koński
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            200
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            25 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Obornik kurzy
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            490
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            10 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Obornik owczy
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            310
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            16 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Obornik świński
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            240
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            21 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Odpadki chleba
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            1200
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            4 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Odpady kuchenne organiczne
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            170
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            29 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Odpady mięsne
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            600
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            8 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Odapdy warzyw
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            170
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            29 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Odpady żywności niskotłuszczowe
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            240
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            21 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Odpady żywności wysokotłuszczowe
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            410
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            12 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Odpady żywności średniotłuszczowe
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            310
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            16 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Olej rzepakowy
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            10
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            500 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Pełne mleko krowie, świeże
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            320
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            16 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Plewy pszeniczne
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            770
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            6 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Pogorzelniany wywar ziemniaczany
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            90
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            56 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Pulpa ziemniaczana
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            190
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            26 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Serwatka
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            110
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            45 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Suchy obornik drobiowy bez słomy
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            680
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            7 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Surowe obierzyny ziemniaczane
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            180
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            28 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Trawa sudańska, kiszonka
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            450
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            11 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Wysłodki buraka, prasowane, zakiszone
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            350
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            14 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Wytłoki jabłkowe
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            300
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            17 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Wytłoki z owoców
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            290
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            17 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Wywar gorzelniany
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            110
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            45 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Wywar gorzelniany, pszeniczny
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            110
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            45 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Zawartość żołądków wieprzowych
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            140
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            36 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Ziemniaki
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            300
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            17 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Śruta poekstrakcyjna rzepakowa
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            1600
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            3 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Śruta żytnio-pszeniczna
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            1600
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            3 000
-                        </td>
-                    </tr>
-                    <tr>
-                        <th
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                            Żyto - kiszonka z całych rośliń
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                            540
-                        </td>
-                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                            9 000
-                        </td>
-                    </tr>
-    
-                </tbody>
-    
-            </table>
-        </div>
-    </div>
+
+<script>
+    const data = {
+    "Owoce i Warzywa": { "Banany": 290, "Buraki cukrowe": 400, "Cebule": 280, "Ziemniaki": 300 },
+    "Gnojowica": { "Gnojowica bydlęca": 70, "Gnojowica świńska": 60 },
+    "Kiszonki": {
+        "Kiszonka słonecznikowa": 280, "Kiszonka z kukurydzy": 570,
+        "Kiszonka z liści buraków": 190, "Kiszonka z lucerny": 490,
+        "Kiszonka z trawy": 450, "Kiszonka z konopii": 190,
+        "Żyto - kiszonka z całych roślin": 540
+    },
+    "Oborniki": {
+        "Obornik bydlęcy": 230, "Obornik indyczy": 380, "Obornik koński": 200,
+        "Obornik kurzy": 490, "Obornik owczy": 310, "Obornik świński": 240
+    },
+    "Odpady": {
+        "Odpadki chleba": 1200, "Odpady kuchenne organiczne": 170, "Odpady mięsne": 600,
+        "Odpady warzyw": 170, "Odpady żywności niskotłuszczowe": 240,
+        "Odpady żywności wysokotłuszczowe": 410, "Odpady żywności średniotłuszczowe": 310,
+        "Zawartość żołądków wieprzowych": 140
+    },
+    "Produkty Mleczne": {
+        "Pełne mleko krowie, świeże": 320, "Serwatka": 110
+    },
+    "Produkty Zbożowe": {
+        "Plewy pszeniczne": 770, "Śruta poekstrakcyjna rzepakowa": 1600, "Śruta żytnio-pszeniczna": 1600
+    },
+    "Produkty Ziemniaczane": {
+        "Pogorzelniany wywar ziemniaczany": 90, "Pulpa ziemniaczana": 190, "Surowe obierzyny ziemniaczane": 180
+    },
+    "Inne": {
+        "Olej rzepakowy": 10, "Suchy obornik drobiowy bez słomy": 680, "Trawa sudańska, kiszonka": 450,
+        "Wysłodki buraka, prasowane, zakiszone": 350, "Wytłoki jabłkowe": 300, "Wytłoki z owoców": 290,
+        "Wywar gorzelniany": 110, "Wywar gorzelniany, pszeniczny": 110
+    }
+};
+
+    const categorySelect = document.getElementById("category");
+    const typeSelect = document.getElementById("type");
+    const massInput = document.getElementById("mass");
+    const calculateBtn = document.getElementById("calculate");
+    const outputDiv = document.getElementById("output");
+
+    Object.keys(data).forEach(category => {
+        const option = document.createElement("option");
+        option.value = category;
+        option.textContent = category;
+        categorySelect.appendChild(option);
+    });
+
+    categorySelect.addEventListener("change", () => {
+        typeSelect.innerHTML = '<option value="">-- Wybierz substrat --</option>';
+        typeSelect.disabled = true;
+        massInput.value = "";
+        massInput.disabled = true;
+        calculateBtn.disabled = true;
+        outputDiv.textContent = "";
+
+        if (categorySelect.value) {
+            Object.keys(data[categorySelect.value]).forEach(type => {
+                const option = document.createElement("option");
+                option.value = type;
+                option.textContent = type;
+                typeSelect.appendChild(option);
+            });
+            typeSelect.disabled = false;
+        }
+    });
+
+    typeSelect.addEventListener("change", () => {
+        massInput.disabled = !typeSelect.value;
+        massInput.value = "";
+        calculateBtn.disabled = true;
+        outputDiv.textContent = "";
+    });
+
+    massInput.addEventListener("input", () => {
+        calculateBtn.disabled = !massInput.value;
+    });
+
+    calculateBtn.addEventListener("click", () => {
+        const category = categorySelect.value;
+        const type = typeSelect.value;
+        const mass = parseFloat(massInput.value);
+
+        if (category && type && mass) {
+            const energyPer10kTons = data[category][type];
+            const result = (mass / 10000) * energyPer10kTons;
+            outputDiv.textContent = `Uzyskana Energia: ${result.toFixed(2)} KW`;
+        }
+    });
+</script>
+
 </section>
 
 {% include "components/cta.html" %}
 
-<script>
-    let search = document.getElementById('search');
-    let table = document.getElementById('table');
-
-    function searchTable() {
-        let filter = search.value.toUpperCase();
-        let tr = table.getElementsByTagName('tr');
-
-        for (var i = 1; i < tr.length; i++) { // Start from 1 to skip thead row
-            let td = tr[i].getElementsByTagName('th')[0];
-            if (td) {
-                let textValue = td.textContent || td.innerText;
-                if (textValue.toUpperCase().indexOf(filter) > -1) {
-                    tr[i].style.display = '';
-                } else {
-                    tr[i].style.display = 'none';
-                }
-            }
-        }
-    }
-
-</script>
 
 {% endblock %}
