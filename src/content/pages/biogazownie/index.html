@@ -163,8 +163,6 @@ permalink: "biogazownie/"
         <div class="output text-lg font-semibold mt-4" id="output"></div>
     </div>
 
-    
-
 <script>
     const data = {
     "Owoce i Warzywa": { "Banany": 290, "Buraki cukrowe": 400, "Cebule": 280, "Ziemniaki": 300 },
@@ -238,6 +236,13 @@ permalink: "biogazownie/"
         massInput.value = "";
         calculateBtn.disabled = true;
         outputDiv.textContent = "";
+
+        if (typeSelect.value) {
+            const category = categorySelect.value;
+            const type = typeSelect.value;
+            const energyRatio = data[category][type];
+            outputDiv.textContent = `Wskaźnik energetyczny: ${energyRatio} KW/10kT`;
+        }
     });
 
     massInput.addEventListener("input", () => {
